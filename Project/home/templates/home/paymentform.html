@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+   
+    {{forms.}}
+    
+    <form method="post">
+        {%csrf_token%}
+        <h1> Payment Form</h1>
+        <h2 style="color:azure; text-align: center;"> Contact Information</h2>
+        <p> Name *: <input type="text" name="name" required></p>
+        <fieldset style="width:200px; height:100px;">
+            <legend>Gender</legend>
+            <p>
+                <input type="radio" name="gender" value="male" required>Male<br>
+                <input type="radio" name="gender" value="female" required>Female<br>
+                <input type="radio" name="gender" value="other" required>Other
+
+            </p>
+        </fieldset>
+
+        <p> Email *:<input type="email" name="email" required></p>
+        <p>Pin Code *:
+            <input name="pincode" type="number" size="6" maxlength="6" required placeholder="123456" pattern="123456"
+                title="Please provide a 6-digit">
+                <p style="color:red;font-family: 'Courier New', Courier, monospace;">{{var}}</p>
+        </p>
+        <p> Mobile Number *:<input type="tel" name="mobile" required></p>
+        <pre> Address *:
+        <textarea name="address" id="" cols="100" rows="10" required></textarea></pre>
+        <h2 style="color:azure;text-align: center;">Payment Details</h2>
+        <p> Amount *:<input type="number" name="amnt" minlength="0" maxlength="7" required>
+        <p>Card Type *
+            <select type="card type" id="card type" name="card type" required>
+                <option value="">--Select a card type--</option>
+                <option value="visa">visa</option>
+                <option value="rupay">rupay</option>
+                <option value="mastercard">mastercard</option>
+            </select>
+        </p>
+
+        <p>
+            Card number *:<input type="number" name="card number" title="Enter a 16-digit number" minlength="0"
+                maxlength="16" pattern="1234123412341234" required>
+            <p style="color:red;font-family:'Courier New', Courier, monospace;">{{var1}}</p>
+        </p>
+        <p> CVV *:<input type="password" name="cvv" minlength="3" maxlength="4" required>
+
+        </p>
+        <p> Valid Thru *:<input type="date" name="validity" required></p>
+        <button type="submit" class="b1">Pay Now</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <p>all fields marked with an asterisk (*) are required</p>
+    
+</body>
+
+</html>

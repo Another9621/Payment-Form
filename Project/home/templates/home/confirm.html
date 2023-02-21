@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirmation page</title>
+    {%load static%}
+    <link rel="stylesheet"  href="{% static 'style2.css' %}">
+</head>
+<body>
+    <form method="get">
+        
+        
+    </form>
+    <h1 style="color:azure;text-align: center;">Payment Form</h1>
+    <h2 style="color:azure;text-align: center;">Verify details and confirm this transaction</h2>
+    <pre>
+    <p>
+       Name          -       {{name1}}
+       Gender        -       {{gender1}}
+       Adress        -       {{add1}}
+       Email         -       {{em}}
+       Pin Code      -       {{pin}}
+       Mobile Number -       {{mob}}
+       Amount        -       {{amt}}
+       Card Type     -       {{ct}}
+       Card Number   -       {{cn}}
+       Valid Thru    -       {{vt}}
+    </p>
+    </pre>
+        
+    <button class="b1" onclick="window.location.href='/home/otp'" target="">Confirm</button>
+    <button  onclick="window.location.href='/home'" target="">Back</button>
+</body>
+</html>

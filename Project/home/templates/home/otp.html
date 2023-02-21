@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'style.css' %}">
+    
+    <style>
+        .b3{
+    color:white;
+    text-align: center;
+    padding:20px;
+    height:35px;
+    width:80px;
+    padding-top: 10px;
+    margin-left:10px;
+    background-color: green;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+button{
+    color:white;
+    text-align: center;
+    padding:20px;
+    height:35px;
+    width:80px;
+    padding-top: 10px;
+    
+    background-color: green;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+    </style>
+</head>
+<h1> Payment Form</h1>
+<fieldset style="width:200px; height:100px; margin-left: 40%;margin-top: 10%;padding-left:2%;">
+    <legend>OTP</legend>
+<p>
+    <input type="password" style="height:20px;width:155px;" type="password" minlength="6" maxlength="6" required>
+    <p></p>
+    <button class="b3" onclick="window.location.href='/home/tq'" target="">Confirm</button>
+    <button type="reset">Reset</button>
+
+</p>
+</fieldset>
+<body>
+    
+</body>
+</html>
