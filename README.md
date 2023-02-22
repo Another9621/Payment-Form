@@ -1,7 +1,7 @@
 # Payment-Form
 
 ## How to run
-In the command prompt, change the file directory to project location using cd
+In the command prompt, change the file directory to project location using cd(make sure python is added to path)
 ```
 $cd c:\djenv\Project
 ```
